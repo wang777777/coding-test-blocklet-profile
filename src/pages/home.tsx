@@ -24,6 +24,8 @@ function Home() {
       }
 
       setUserProfile(res.data);
+    } catch (error) {
+      console.error(error);
     } finally {
       setLoading(false);
     }
@@ -46,6 +48,8 @@ function Home() {
       const res = await axios.post('/api/user-profile', userInfo);
       setIsEdit(false);
       setUserProfile(res.data);
+    } catch (error) {
+      console.error(error);
     } finally {
       setSubmitting(false);
     }
